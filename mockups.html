@@ -1,0 +1,581 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HomeSaathi — UI Mockups (Document 8)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --jade:#0B9A8A;--jade-d:#07786C;--teal3:#6EABA5;
+  --mint:#E5F5F8;--mint2:#EDF7FC;--bg:#F3F8FB;--card:#fff;--border:#DCEAEB;
+  --txt:#243B3D;--txt2:#5C7375;
+  --success:#1E9E6A;--warn:#E08A2B;--error:#E04A33;--info:#357DBD;--gold:#F4B400;
+  --rc:16px;--rb:12px;--rt:14px;--ri:10px;
+  --sh:0 8px 24px rgba(11,90,90,.10);--sh2:0 2px 8px rgba(11,90,90,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--txt);
+  -webkit-font-smoothing:antialiased;line-height:1.4}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+.dochead{background:linear-gradient(135deg,var(--jade),var(--jade-d));color:#fff;border-radius:18px;padding:26px 28px;box-shadow:var(--sh)}
+.dochead h1{font-size:26px;font-weight:700;letter-spacing:.2px}
+.dochead p{opacity:.92;margin-top:6px;font-size:14px;font-weight:400}
+.docnote{background:var(--mint);border-left:5px solid var(--warn);border-radius:10px;padding:12px 16px;margin:18px 0 8px;font-size:13px;color:var(--txt2)}
+.sec{margin-top:34px}
+.sec>h2{display:inline-block;font-size:14px;font-weight:600;color:#fff;background:var(--jade);padding:7px 16px;border-radius:20px;letter-spacing:.3px}
+.gallery{display:flex;flex-wrap:wrap;gap:26px 22px;margin-top:20px;align-items:flex-start}
+.frame{width:300px;max-width:100%}
+.cap{text-align:center;font-size:12px;font-weight:500;color:var(--txt2);margin-top:8px}
+.phone{width:300px;max-width:100%;background:var(--card);border:1px solid var(--border);
+  border-radius:26px;box-shadow:var(--sh);overflow:hidden}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:8px 16px 4px;font-size:11px;font-weight:600;color:var(--txt)}
+.sbar .ic{display:flex;gap:4px;align-items:center}
+.sbar .ic svg{width:13px;height:13px}
+.scr{padding:12px 14px 16px;min-height:120px}
+.appbar{display:flex;align-items:center;gap:10px;margin:2px 0 10px}
+.appbar .t{font-weight:600;font-size:15px;flex:1;text-align:center}
+.appbar .ico{width:22px;height:22px;color:var(--txt)}
+.h-greet{font-size:17px;font-weight:600}
+.muted{color:var(--txt2)}
+.fs12{font-size:12px}.fs11{font-size:11px}.fs13{font-size:13px}
+.search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:var(--ri);padding:9px 12px;margin:10px 0;box-shadow:var(--sh2)}
+.search input{border:0;outline:0;flex:1;font-family:inherit;font-size:12px;color:var(--txt2)}
+.search svg{width:15px;height:15px;color:var(--teal3)}
+.rowbtw{display:flex;justify-content:space-between;align-items:center}
+.link{color:var(--jade);font-size:11px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0}
+.tile{background:var(--mint);border-radius:var(--rt);padding:12px 6px;text-align:center}
+.tile .gi{width:30px;height:30px;margin:0 auto 6px;color:var(--jade)}
+.tile span{font-size:10.5px;font-weight:500}
+.promo{background:linear-gradient(120deg,#13a895,#0b8c7e);color:#fff;border-radius:var(--rc);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.promo .pt{font-size:13px;font-weight:600}.promo .ps{font-size:10.5px;opacity:.9}
+.btn{display:block;width:100%;text-align:center;border:0;border-radius:var(--rb);padding:12px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer}
+.btn-p{background:var(--jade);color:#fff}
+.btn-o{background:#fff;color:var(--jade);border:1.5px solid var(--jade)}
+.mt8{margin-top:8px}.mt10{margin-top:10px}.mt12{margin-top:12px}.mt14{margin-top:14px}.mt6{margin-top:6px}
+.nav{display:flex;justify-content:space-around;border-top:1px solid var(--border);padding:9px 6px 4px;background:#fff}
+.nav .n{text-align:center;color:var(--teal3);font-size:9.5px;font-weight:500}
+.nav .n svg{width:20px;height:20px;display:block;margin:0 auto 2px}
+.nav .n.on{color:var(--jade)}
+.logo{display:flex;flex-direction:column;align-items:center;gap:6px}
+.logo .name{font-size:22px;font-weight:700;color:var(--jade);letter-spacing:.3px}
+.logo .tg{font-size:11px;color:var(--txt2);text-align:center}
+.illus{background:var(--mint);border-radius:var(--rc);height:120px;display:flex;align-items:center;justify-content:center;margin:12px 0}
+.illus svg{width:74px;height:74px;color:var(--jade)}
+.feat{display:flex;align-items:center;gap:9px;font-size:11.5px;margin:7px 0}
+.feat .ck{width:18px;height:18px;color:var(--success);flex:none}
+.svc{display:flex;gap:10px;background:#fff;border:1px solid var(--border);border-radius:var(--rt);padding:9px;align-items:center;margin-bottom:8px}
+.svc .th{width:42px;height:42px;border-radius:10px;background:var(--mint);display:flex;align-items:center;justify-content:center;flex:none}
+.svc .th svg{width:22px;height:22px;color:var(--jade)}
+.svc .nm{font-size:12px;font-weight:600}
+.svc .pr{font-size:11px;color:var(--jade);font-weight:600}
+.catwrap{display:flex;gap:10px}
+.cats{flex:none;width:78px}
+.cat{font-size:10px;text-align:center;padding:9px 4px;border-radius:10px;color:var(--txt2);margin-bottom:6px}
+.cat .ci{width:20px;height:20px;margin:0 auto 3px;display:block;color:var(--teal3)}
+.cat.on{background:var(--mint);color:var(--jade);font-weight:600}
+.cat.on .ci{color:var(--jade)}
+.hero{height:96px;border-radius:var(--rc);background:linear-gradient(120deg,#dff1ee,#c9e9e3);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.hero svg{width:48px;height:48px;color:var(--jade)}
+.chips{display:flex;gap:8px;margin:8px 0}
+.chip{flex:1;background:var(--mint);border-radius:10px;padding:8px;text-align:center;font-size:10px}
+.chip b{display:block;font-size:11px}
+.price{font-size:20px;font-weight:700;color:var(--jade)}
+.incl{display:flex;align-items:center;gap:8px;font-size:11.5px;margin:6px 0}
+.incl .ck{width:16px;height:16px;color:var(--success)}
+.cal{background:#fff;border:1px solid var(--border);border-radius:var(--rc);padding:10px;margin:8px 0}
+.cal .mh{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;margin-bottom:6px}
+.cal table{width:100%;border-collapse:collapse}
+.cal td,.cal th{text-align:center;font-size:10px;padding:4px 0;color:var(--txt2)}
+.cal th{font-weight:600}
+.cal td .d{width:22px;height:22px;line-height:22px;border-radius:50%;display:inline-block;color:var(--txt)}
+.cal td .d.sel{background:var(--jade);color:#fff;font-weight:600}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{border:1px solid var(--border);border-radius:9px;text-align:center;padding:8px 0;font-size:10.5px;color:var(--txt)}
+.slot.sel{background:var(--jade);color:#fff;border-color:var(--jade);font-weight:600}
+.sumrow{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:9px 0;border-bottom:1px solid var(--border)}
+.sumrow .l{display:flex;gap:8px;align-items:center;color:var(--txt2)}
+.sumrow svg{width:15px;height:15px;color:var(--teal3)}
+.total{display:flex;justify-content:space-between;font-size:15px;font-weight:700;padding-top:10px}
+.map{height:170px;border-radius:var(--rc);background:#e9f0f1 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='170'><g stroke='%23d2e0e2' stroke-width='1' fill='none'><path d='M0 40H300M0 90H300M0 140H300M60 0V170M150 0V170M240 0V170'/></g></svg>") center/cover;position:relative;overflow:hidden}
+.route{position:absolute;inset:0}
+.pin{position:absolute;width:16px;height:16px}
+.protag{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border);border-radius:var(--rc);padding:10px;margin-top:10px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;flex:none;color:var(--jade)}
+.av svg{width:22px;height:22px}
+.twobtn{display:flex;gap:10px;margin-top:10px}
+.twobtn .btn{padding:10px}
+.statline{display:flex;justify-content:space-between;text-align:center;background:var(--mint);border-radius:var(--rc);padding:12px 6px;margin:10px 0}
+.statline .s b{font-size:15px;display:block;color:var(--txt)}
+.statline .s span{font-size:9.5px;color:var(--txt2)}
+.earn{background:linear-gradient(120deg,#13a895,#0b8c7e);color:#fff;border-radius:var(--rc);padding:14px 16px}
+.earn .lbl{font-size:10.5px;opacity:.9}.earn .amt{font-size:22px;font-weight:700}
+.listrow{display:flex;align-items:center;gap:10px;padding:11px 2px;border-bottom:1px solid var(--border);font-size:12px}
+.listrow .ri{width:20px;height:20px;color:var(--teal3);flex:none}
+.listrow .ch{margin-left:auto;color:var(--teal3)}
+.bk{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:var(--rt);padding:9px;margin-bottom:8px}
+.bk .ic{width:34px;height:34px;border-radius:9px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--jade);flex:none}
+.bk .ic svg{width:18px;height:18px}
+.badge{font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:20px;margin-left:auto}
+.b-up{background:#fbeedd;color:var(--warn)}
+.b-prog{background:#e1f2ea;color:var(--success)}
+.toggle{display:flex;background:var(--mint);border-radius:20px;padding:3px;margin:10px 0;font-size:10.5px}
+.toggle div{flex:1;text-align:center;padding:6px;border-radius:18px;color:var(--txt2)}
+.toggle div.on{background:var(--jade);color:#fff;font-weight:600}
+.timer{font-size:30px;font-weight:700;color:var(--jade);text-align:center;letter-spacing:1px}
+/* admin */
+.browser{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--sh);overflow:hidden;margin-top:20px}
+.bchrome{display:flex;gap:6px;align-items:center;padding:10px 14px;background:#eef4f5;border-bottom:1px solid var(--border)}
+.bchrome i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.bchrome .u{margin-left:12px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:3px 12px;font-size:11px;color:var(--txt2)}
+.admin{display:flex;min-height:560px}
+.side{width:190px;flex:none;background:#0c3a39;color:#cfe6e3;padding:16px 0}
+.side .brand{font-weight:700;color:#fff;font-size:16px;padding:0 18px 14px}
+.side a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:12.5px;color:#bcdcd8;text-decoration:none}
+.side a svg{width:16px;height:16px}
+.side a.on{background:rgba(255,255,255,.12);color:#fff;font-weight:600;border-left:3px solid var(--jade)}
+.amain{flex:1;padding:18px 20px;background:var(--bg);overflow-x:auto}
+.atop{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.atop h3{font-size:18px;font-weight:700}
+.daterange{background:#fff;border:1px solid var(--border);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--txt2);display:flex;gap:8px;align-items:center}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}
+.kpi{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px}
+.kpi .k{font-size:11px;color:var(--txt2)}
+.kpi .v{font-size:20px;font-weight:700;margin:4px 0}
+.kpi .d{font-size:11px;font-weight:600;color:var(--success)}
+.arow{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px}
+.panel{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px}
+.panel h4{font-size:13px;font-weight:600;margin-bottom:10px}
+.legend{font-size:11px}
+.legend .lg{display:flex;align-items:center;gap:7px;margin:5px 0}
+.legend .dot{width:9px;height:9px;border-radius:2px;flex:none}
+.legend .pc{margin-left:auto;font-weight:600;color:var(--txt2)}
+.rb{display:flex;align-items:center;gap:8px;font-size:11px;padding:6px 0;border-bottom:1px solid var(--border)}
+.rb .av2{width:24px;height:24px;border-radius:50%;background:var(--mint);color:var(--jade);display:flex;align-items:center;justify-content:center;flex:none}
+.rb .av2 svg{width:13px;height:13px}
+.arow2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:14px}
+.amap{height:230px;border-radius:10px;position:relative;overflow:hidden;background:#e9f0f1 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='230'><g stroke='%23d2e0e2' stroke-width='1' fill='none'><path d='M0 50H400M0 110H400M0 170H400M90 0V230M200 0V230M310 0V230'/></g></svg>") center/cover}
+.activepill{position:absolute;left:14px;bottom:14px;background:#fff;border-radius:10px;box-shadow:var(--sh2);padding:8px 12px;font-size:11px;display:flex;gap:8px;align-items:center}
+.activepill b{font-size:16px;color:var(--jade)}
+.alert{display:flex;gap:9px;align-items:flex-start;font-size:11px;padding:8px 0;border-bottom:1px solid var(--border)}
+.alert .ad{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.alert .ad svg{width:12px;height:12px;color:#fff}
+.alert small{color:var(--txt2);display:block}
+@media(max-width:560px){
+  .frame,.phone{width:100%}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .arow,.arow2{grid-template-columns:1fr}
+  .admin{min-width:0}
+}
+</style>
+<!-- reusable SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M20 20l-3-3"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 11a6 6 0 0012 0M12 17v4"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6h-6v6H5a1 1 0 01-1-1z"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M16 12h3"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 20a7 7 0 0114 0"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 9h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4 10-11"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H8l-4 4z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.9 6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></symbol>
+<symbol id="i-clean" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3l4 4-7 7-4-4zM7 14l-3 3 3 3 3-3M19 8l1 1"/></symbol>
+<symbol id="i-cook" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 10a7 7 0 0114 0zM4 14h16v2a3 3 0 01-3 3H7a3 3 0 01-3-3z"/></symbol>
+<symbol id="i-care" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 21a6 6 0 0112 0M12 13v3"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="9" r="1" fill="currentColor"/><circle cx="14" cy="9" r="1" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 12.5c1 1 3 1 4 0"/></symbol>
+<symbol id="i-elder" viewBox="0 0 24 24"><circle cx="11" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 21l1-8 4 1 1 7M17 21l-1-9M17 12v9"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="12" r="1.6" fill="currentColor"/></symbol>
+<symbol id="i-house-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 11l8-7 8 7v8a1 1 0 01-1 1H5a1 1 0 01-1-1z"/><path fill="currentColor" d="M12 17l-2.6-2.5a1.5 1.5 0 112.1-2.1l.5.5.5-.5a1.5 1.5 0 112.1 2.1z"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 3h8l4 4v14H6zM14 3v4h4"/></symbol>
+<symbol id="i-bank" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 9l9-5 9 5zM5 9v9M19 9v9M9 9v9M15 9v9M3 21h18"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9.5 9.5a2.5 2.5 0 113.5 2.3c-.8.4-1 .9-1 1.7M12 17h.01"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4H6v16h8M10 12h10m0 0l-3-3m3 3l-3 3"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol>
+<symbol id="i-rupee" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 5h10M7 9h10M14 5c0 4-3 5-6 5l6 9"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 9a6 6 0 1112 0c0 5 2 6 2 6H4s2-1 2-6zM10 20a2 2 0 004 0"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.4" fill="#fff"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-sig" viewBox="0 0 24 24"><path fill="currentColor" d="M2 16h3v4H2zM7 12h3v8H7zM12 8h3v12h-3zM17 4h3v16h-3z"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M2 8a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></symbol>
+<symbol id="i-bat" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2" fill="currentColor"/><rect x="21" y="10" width="2" height="4" rx="1" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div class="wrap">
+  <div class="dochead">
+    <h1>HomeSaathi — UI Mockups</h1>
+    <p>Document 8 of 16 · Web-first, mobile-responsive · Built on the Theme &amp; Design System (Document 7)</p>
+  </div>
+  <div class="docnote">These are interactive HTML mockups, not final assets. The catalogue shows the fuller product; the MVP launches with a single service in one pincode (see Document 1). Resize the window — phone frames reflow to a single column on mobile, and the Admin console becomes scrollable.</div>
+
+  <!-- ================= CUSTOMER ================= -->
+  <div class="sec"><h2>CUSTOMER APP — KEY SCREENS</h2>
+    <div class="gallery">
+
+      <!-- 1 Welcome -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="logo" style="margin-top:18px">
+            <svg style="width:56px;height:56px;color:var(--jade)"><use href="#i-house-heart"/></svg>
+            <div class="name">HomeSaathi</div><div class="tg">Trusted help for modern homes</div>
+          </div>
+          <div class="illus"><svg><use href="#i-house-heart"/></svg></div>
+          <div class="feat"><svg class="ck"><use href="#i-check"/></svg>Verified &amp; trusted professionals</div>
+          <div class="feat"><svg class="ck"><use href="#i-check"/></svg>On-time &amp; reliable service</div>
+          <div class="feat"><svg class="ck"><use href="#i-check"/></svg>Safe &amp; secure payments</div>
+          <button class="btn btn-p mt12">Get Started</button>
+          <button class="btn btn-o mt8">Login / Sign Up</button>
+        </div>
+      </div><div class="cap">1 · Welcome</div></div>
+
+      <!-- 2 Home -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="rowbtw"><div class="h-greet">Hello, Neha 👋</div><svg style="width:20px;height:20px;color:var(--teal3)"><use href="#i-chat"/></svg></div>
+          <div class="muted fs12">What service do you need?</div>
+          <div class="search"><svg><use href="#i-search"/></svg><input placeholder="Search for a service…" readonly><svg><use href="#i-mic"/></svg></div>
+          <div class="rowbtw"><b class="fs13">Popular Services</b><span class="link">View all</span></div>
+          <div class="tiles">
+            <div class="tile"><svg class="gi"><use href="#i-clean"/></svg><span>Cleaning</span></div>
+            <div class="tile"><svg class="gi"><use href="#i-cook"/></svg><span>Cooking</span></div>
+            <div class="tile"><svg class="gi"><use href="#i-care"/></svg><span>Caretaker</span></div>
+            <div class="tile"><svg class="gi"><use href="#i-baby"/></svg><span>Baby Care</span></div>
+            <div class="tile"><svg class="gi"><use href="#i-elder"/></svg><span>Elderly Care</span></div>
+            <div class="tile"><svg class="gi"><use href="#i-more"/></svg><span>More</span></div>
+          </div>
+          <div class="promo"><div><div class="pt">Flat 20% OFF</div><div class="ps">on your first booking</div></div><button class="btn" style="width:auto;background:#fff;color:var(--jade);padding:8px 14px">Book Now</button></div>
+        </div>
+        <div class="nav">
+          <div class="n on"><svg><use href="#i-home"/></svg>Home</div>
+          <div class="n"><svg><use href="#i-cal"/></svg>Bookings</div>
+          <div class="n"><svg><use href="#i-wallet"/></svg>Wallet</div>
+          <div class="n"><svg><use href="#i-user"/></svg>Profile</div>
+        </div>
+      </div><div class="cap">2 · Home / Dashboard</div></div>
+
+      <!-- 3 Services -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Services</div><svg class="ico"><use href="#i-search"/></svg></div>
+          <div class="catwrap">
+            <div class="cats">
+              <div class="cat on"><svg class="ci"><use href="#i-grid"/></svg>All</div>
+              <div class="cat"><svg class="ci"><use href="#i-clean"/></svg>Cleaning</div>
+              <div class="cat"><svg class="ci"><use href="#i-cook"/></svg>Cooking</div>
+              <div class="cat"><svg class="ci"><use href="#i-care"/></svg>Caretaker</div>
+              <div class="cat"><svg class="ci"><use href="#i-baby"/></svg>Baby Care</div>
+              <div class="cat"><svg class="ci"><use href="#i-elder"/></svg>Elderly</div>
+            </div>
+            <div style="flex:1">
+              <div class="svc"><div class="th"><svg><use href="#i-clean"/></svg></div><div><div class="nm">Home Cleaning</div><div class="pr">Starting at ₹349</div></div></div>
+              <div class="svc"><div class="th"><svg><use href="#i-clean"/></svg></div><div><div class="nm">Deep Cleaning</div><div class="pr">Starting at ₹549</div></div></div>
+              <div class="svc"><div class="th"><svg><use href="#i-cook"/></svg></div><div><div class="nm">Cooking</div><div class="pr">Starting at ₹299</div></div></div>
+              <div class="svc"><div class="th"><svg><use href="#i-care"/></svg></div><div><div class="nm">Caretaker</div><div class="pr">Starting at ₹399</div></div></div>
+              <div class="svc"><div class="th"><svg><use href="#i-elder"/></svg></div><div><div class="nm">Elderly Care</div><div class="pr">Starting at ₹499</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div><div class="cap">3 · Services</div></div>
+
+      <!-- 4 Service Details -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Service Details</div><svg class="ico"><use href="#i-more"/></svg></div>
+          <div class="hero"><svg><use href="#i-clean"/></svg></div>
+          <div class="rowbtw"><b style="font-size:15px">Home Cleaning</b><span class="price">₹349</span></div>
+          <div class="chips"><div class="chip">Duration<b>2 Hours</b></div><div class="chip">Professional<b>1 Cleaner</b></div></div>
+          <b class="fs13">What's Included</b>
+          <div class="incl"><svg class="ck"><use href="#i-check"/></svg>Sweeping &amp; Mopping</div>
+          <div class="incl"><svg class="ck"><use href="#i-check"/></svg>Dusting</div>
+          <div class="incl"><svg class="ck"><use href="#i-check"/></svg>Kitchen Cleaning</div>
+          <div class="incl"><svg class="ck"><use href="#i-check"/></svg>Bathroom Cleaning</div>
+          <button class="btn btn-p mt12">Book Now</button>
+        </div>
+      </div><div class="cap">4 · Service Details</div></div>
+
+      <!-- 5 Date & Time -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Select Date &amp; Time</div><span style="width:22px"></span></div>
+          <b class="fs13">Select Date</b>
+          <div class="cal">
+            <div class="mh"><svg style="width:14px;height:14px;color:var(--teal3)"><use href="#i-back"/></svg>May 2024<svg style="width:14px;height:14px;color:var(--teal3);transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+            <table><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+            <tr><td></td><td></td><td></td><td><span class="d">1</span></td><td><span class="d">2</span></td><td><span class="d">3</span></td><td><span class="d">4</span></td></tr>
+            <tr><td><span class="d">5</span></td><td><span class="d">6</span></td><td><span class="d">7</span></td><td><span class="d">8</span></td><td><span class="d">9</span></td><td><span class="d">10</span></td><td><span class="d">11</span></td></tr>
+            <tr><td><span class="d">12</span></td><td><span class="d">13</span></td><td><span class="d">14</span></td><td><span class="d sel">15</span></td><td><span class="d">16</span></td><td><span class="d">17</span></td><td><span class="d">18</span></td></tr>
+            <tr><td><span class="d">19</span></td><td><span class="d">20</span></td><td><span class="d">21</span></td><td><span class="d">22</span></td><td><span class="d">23</span></td><td><span class="d">24</span></td><td><span class="d">25</span></td></tr></table>
+          </div>
+          <b class="fs13">Select Time Slot</b>
+          <div class="slots mt8">
+            <div class="slot">08:00 AM</div><div class="slot sel">10:00 AM</div><div class="slot">11:00 AM</div>
+            <div class="slot">02:00 PM</div><div class="slot">03:00 PM</div><div class="slot">04:00 PM</div>
+          </div>
+          <button class="btn btn-p mt12">Continue</button>
+        </div>
+      </div><div class="cap">5 · Date &amp; Time</div></div>
+
+      <!-- 6 Booking Summary -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Booking Summary</div><span style="width:22px"></span></div>
+          <div class="svc"><div class="th"><svg><use href="#i-clean"/></svg></div><div style="flex:1"><div class="nm">Home Cleaning</div><div class="muted fs11">2 Hours · 1 Cleaner</div></div><span class="pr">₹349</span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-cal"/></svg>Date &amp; Time</span><span>15 May, 10:00 AM</span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-user"/></svg>Professional</span><span>1 Cleaner</span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-wallet"/></svg>Platform Fee</span><span>₹30</span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-rupee"/></svg>Service Amount</span><span>₹349</span></div>
+          <div class="total"><span>Total</span><span style="color:var(--jade)">₹379</span></div>
+          <button class="btn btn-p mt12">Proceed to Pay</button>
+        </div>
+      </div><div class="cap">6 · Booking Summary</div></div>
+
+      <!-- 7 Live Tracking -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Live Tracking</div><span style="width:22px"></span></div>
+          <div class="map">
+            <svg class="route" viewBox="0 0 300 170" preserveAspectRatio="none"><path d="M40 30 C 90 40, 70 110, 150 110 S 240 120, 250 140" fill="none" stroke="#357DBD" stroke-width="3" stroke-linecap="round"/></svg>
+            <svg class="pin" style="left:32px;top:20px;color:var(--jade)"><use href="#i-pin"/></svg>
+            <svg class="pin" style="left:242px;top:128px;color:var(--error)"><use href="#i-pin"/></svg>
+          </div>
+          <div class="protag">
+            <div class="av"><svg><use href="#i-user"/></svg></div>
+            <div style="flex:1"><div class="nm">Sunita Devi</div><div class="fs11" style="color:var(--gold)"><svg style="width:11px;height:11px"><use href="#i-star"/></svg> 4.8 · Cleaner</div></div>
+            <svg style="width:18px;height:18px;color:var(--jade)"><use href="#i-phone"/></svg>
+          </div>
+          <div class="fs12 muted mt6" style="text-align:center">Arriving in <b style="color:var(--jade)">12 mins</b></div>
+          <div class="twobtn"><button class="btn btn-o"><svg style="width:13px;height:13px;vertical-align:-1px"><use href="#i-chat"/></svg> Chat</button><button class="btn btn-p"><svg style="width:13px;height:13px;vertical-align:-1px"><use href="#i-phone"/></svg> Call</button></div>
+        </div>
+      </div><div class="cap">7 · Live Tracking</div></div>
+
+    </div>
+  </div>
+
+  <!-- ================= PROVIDER ================= -->
+  <div class="sec"><h2>PROVIDER APP — KEY SCREENS</h2>
+    <div class="gallery">
+
+      <!-- 1 Login -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="illus" style="margin-top:18px"><svg><use href="#i-care"/></svg></div>
+          <b style="font-size:17px">Welcome Back!</b>
+          <div class="muted fs12 mt6">Login to your account</div>
+          <div class="search mt12" style="box-shadow:none"><svg><use href="#i-phone"/></svg><input placeholder="Enter mobile number" readonly></div>
+          <button class="btn btn-p mt8">Send OTP</button>
+          <div class="fs12 muted mt12" style="text-align:center">New to HomeSaathi? <span class="link">Create an Account</span></div>
+        </div>
+      </div><div class="cap">1 · Login / Signup</div></div>
+
+      <!-- 2 Dashboard -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><div class="t" style="text-align:left;flex:1">Dashboard</div><svg class="ico"><use href="#i-bell"/></svg></div>
+          <div class="earn"><div class="lbl">Today's Earnings</div><div class="amt">₹3,450</div></div>
+          <div class="statline">
+            <div class="s"><b>18</b><span>Bookings</span></div>
+            <div class="s"><b>16</b><span>Completed</span></div>
+            <div class="s"><b>4.8★</b><span>Ratings</span></div>
+          </div>
+          <div class="listrow"><svg class="ri"><use href="#i-cal"/></svg>Today's Bookings<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-list"/></svg>My Schedule<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-rupee"/></svg>Earnings<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-user"/></svg>Profile<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+        </div>
+        <div class="nav">
+          <div class="n on"><svg><use href="#i-home"/></svg>Home</div>
+          <div class="n"><svg><use href="#i-cal"/></svg>Bookings</div>
+          <div class="n"><svg><use href="#i-rupee"/></svg>Earnings</div>
+          <div class="n"><svg><use href="#i-more"/></svg>More</div>
+        </div>
+      </div><div class="cap">2 · Dashboard</div></div>
+
+      <!-- 3 Today's Bookings -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Today's Bookings</div><span style="width:22px"></span></div>
+          <div class="muted fs12" style="text-align:center;margin-bottom:8px">15 May 2024</div>
+          <div class="bk"><div class="ic"><svg><use href="#i-clean"/></svg></div><div><div class="nm fs12">Home Cleaning</div><div class="muted fs11">Neha Sharma</div></div><span class="badge b-up">Upcoming</span></div>
+          <div class="bk"><div class="ic"><svg><use href="#i-clean"/></svg></div><div><div class="nm fs12">Deep Cleaning</div><div class="muted fs11">Rohit Verma</div></div><span class="badge b-up">Upcoming</span></div>
+          <div class="bk"><div class="ic"><svg><use href="#i-cook"/></svg></div><div><div class="nm fs12">Cooking</div><div class="muted fs11">Priya Singh</div></div><span class="badge b-up">Upcoming</span></div>
+          <div class="link mt8" style="text-align:center">View All Bookings</div>
+        </div>
+      </div><div class="cap">3 · Today's Bookings</div></div>
+
+      <!-- 4 Booking Details -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Booking Details</div><span style="width:22px"></span></div>
+          <div class="bk" style="border-color:var(--mint);background:var(--mint)"><div class="ic" style="background:#fff"><svg><use href="#i-clean"/></svg></div><div><div class="nm fs12">Home Cleaning</div><div class="muted fs11">2 Hours · 1 Cleaner</div></div></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-user"/></svg>Customer</span><span>Neha Sharma <svg style="width:13px;height:13px;color:var(--jade);vertical-align:-2px"><use href="#i-phone"/></svg></span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-pin"/></svg>Address</span><span style="text-align:right;font-size:11px">A-1203, Lotus Blvd,<br>Sector 16, Noida</span></div>
+          <div class="sumrow"><span class="l"><svg><use href="#i-cal"/></svg>Date &amp; Time</span><span>15 May, 10:00 AM</span></div>
+          <button class="btn btn-p mt14">Start Service</button>
+        </div>
+      </div><div class="cap">4 · Booking Details</div></div>
+
+      <!-- 5 Start Service -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Start Service</div><span style="width:22px"></span></div>
+          <div class="illus" style="height:130px;margin-top:14px"><svg style="width:60px;height:60px"><use href="#i-clean"/></svg></div>
+          <div style="text-align:center" class="mt8"><b style="font-size:16px">Service Started</b></div>
+          <div class="timer mt8">00:05:12</div>
+          <div class="muted fs12" style="text-align:center">Time in progress</div>
+          <button class="btn btn-p mt14">Mark as Completed</button>
+        </div>
+      </div><div class="cap">5 · Start Service</div></div>
+
+      <!-- 6 Earnings -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">Earnings</div><span style="width:22px"></span></div>
+          <div class="earn"><div class="lbl">Total Earnings</div><div class="amt">₹12,450</div></div>
+          <div class="toggle"><div>Week</div><div class="on">Month</div><div>Year</div></div>
+          <svg viewBox="0 0 280 110" style="width:100%;height:110px">
+            <g fill="var(--jade)">
+              <rect x="14" y="60" width="20" height="40" rx="4" opacity=".5"/>
+              <rect x="52" y="40" width="20" height="60" rx="4" opacity=".5"/>
+              <rect x="90" y="25" width="20" height="75" rx="4"/>
+              <rect x="128" y="50" width="20" height="50" rx="4" opacity=".5"/>
+              <rect x="166" y="30" width="20" height="70" rx="4" opacity=".5"/>
+              <rect x="204" y="48" width="20" height="52" rx="4" opacity=".5"/>
+              <rect x="242" y="35" width="20" height="65" rx="4" opacity=".5"/>
+            </g>
+          </svg>
+          <b class="fs13">Recent Transactions</b>
+          <div class="listrow"><div class="ic" style="width:28px;height:28px;border-radius:8px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--jade)"><svg style="width:15px;height:15px"><use href="#i-clean"/></svg></div>Home Cleaning<span style="margin-left:auto;color:var(--success);font-weight:600">₹349</span></div>
+          <div class="listrow"><div class="ic" style="width:28px;height:28px;border-radius:8px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--jade)"><svg style="width:15px;height:15px"><use href="#i-clean"/></svg></div>Deep Cleaning<span style="margin-left:auto;color:var(--success);font-weight:600">₹549</span></div>
+        </div>
+      </div><div class="cap">6 · Earnings</div></div>
+
+      <!-- 7 Profile -->
+      <div class="frame"><div class="phone">
+        <div class="sbar"><span>9:41</span><span class="ic"><svg><use href="#i-sig"/></svg><svg><use href="#i-wifi"/></svg><svg><use href="#i-bat"/></svg></span></div>
+        <div class="scr">
+          <div class="appbar"><svg class="ico"><use href="#i-back"/></svg><div class="t">My Profile</div><span style="width:22px"></span></div>
+          <div style="text-align:center;margin:8px 0">
+            <div class="av" style="width:64px;height:64px;margin:0 auto"><svg style="width:34px;height:34px"><use href="#i-user"/></svg></div>
+            <b style="font-size:15px;display:block;margin-top:8px">Sunita Devi</b>
+            <div class="fs11" style="color:var(--gold)"><svg style="width:11px;height:11px"><use href="#i-star"/></svg> 4.8 (120 reviews)</div>
+          </div>
+          <div class="listrow"><svg class="ri"><use href="#i-user"/></svg>Personal Information<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-doc"/></svg>Documents<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-bank"/></svg>Bank Details<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow"><svg class="ri"><use href="#i-help"/></svg>Help &amp; Support<svg class="ch" style="width:16px;height:16px;transform:scaleX(-1)"><use href="#i-back"/></svg></div>
+          <div class="listrow" style="color:var(--error)"><svg class="ri" style="color:var(--error)"><use href="#i-logout"/></svg>Log Out</div>
+        </div>
+      </div><div class="cap">7 · Profile</div></div>
+
+    </div>
+  </div>
+
+  <!-- ================= ADMIN ================= -->
+  <div class="sec"><h2>ADMIN &amp; OPERATIONS — WEB CONSOLE</h2>
+    <div class="browser">
+      <div class="bchrome"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">app.homesaathi.com/dashboard</span></div>
+      <div class="admin">
+        <div class="side">
+          <div class="brand">HomeSaathi</div>
+          <a class="on"><svg><use href="#i-grid"/></svg>Dashboard</a>
+          <a><svg><use href="#i-cal"/></svg>Bookings</a>
+          <a><svg><use href="#i-user"/></svg>Customers</a>
+          <a><svg><use href="#i-care"/></svg>Professionals</a>
+          <a><svg><use href="#i-list"/></svg>Services</a>
+          <a><svg><use href="#i-rupee"/></svg>Payments</a>
+          <a><svg><use href="#i-star"/></svg>Reviews</a>
+          <a><svg><use href="#i-help"/></svg>Support</a>
+          <a><svg><use href="#i-gear"/></svg>Settings</a>
+        </div>
+        <div class="amain">
+          <div class="atop"><h3>Dashboard</h3><div class="daterange"><svg style="width:14px;height:14px;color:var(--teal3)"><use href="#i-cal"/></svg>15 May 2024 – 21 May 2024</div></div>
+          <div class="kpis">
+            <div class="kpi"><div class="k">Total Bookings</div><div class="v">1,245</div><div class="d">↑ 12%</div></div>
+            <div class="kpi"><div class="k">Total Revenue</div><div class="v">₹2,48,750</div><div class="d">↑ 18%</div></div>
+            <div class="kpi"><div class="k">Active Professionals</div><div class="v">356</div><div class="d">↑ 8%</div></div>
+            <div class="kpi"><div class="k">New Customers</div><div class="v">842</div><div class="d">↑ 15%</div></div>
+          </div>
+          <div class="arow">
+            <div class="panel"><h4>Bookings Overview</h4>
+              <svg viewBox="0 0 360 150" style="width:100%;height:150px">
+                <g stroke="var(--border)" stroke-width="1"><line x1="0" y1="120" x2="360" y2="120"/><line x1="0" y1="80" x2="360" y2="80"/><line x1="0" y1="40" x2="360" y2="40"/></g>
+                <path d="M10 100 L70 86 L130 94 L190 60 L250 72 L310 38 L350 30" fill="none" stroke="var(--jade)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 100 L70 86 L130 94 L190 60 L250 72 L310 38 L350 30 L350 130 L10 130 Z" fill="var(--jade)" opacity=".08"/>
+                <g fill="var(--jade)"><circle cx="190" cy="60" r="3.5"/><circle cx="310" cy="38" r="3.5"/></g>
+                <g fill="var(--txt2)" font-size="9"><text x="6" y="145">15</text><text x="66" y="145">16</text><text x="126" y="145">17</text><text x="186" y="145">18</text><text x="246" y="145">19</text><text x="306" y="145">20</text><text x="340" y="145">21</text></g>
+              </svg>
+            </div>
+            <div class="panel"><h4>Top Services</h4>
+              <div style="display:flex;gap:12px;align-items:center">
+                <svg viewBox="0 0 120 120" style="width:96px;height:96px">
+                  <g transform="rotate(-90 60 60)" fill="none" stroke-width="18">
+                    <circle cx="60" cy="60" r="45" stroke="var(--jade)" stroke-dasharray="127.2 155.5"/>
+                    <circle cx="60" cy="60" r="45" stroke="var(--jade-d)" stroke-dasharray="70.7 212" stroke-dashoffset="-127.2"/>
+                    <circle cx="60" cy="60" r="45" stroke="var(--teal3)" stroke-dasharray="42.4 240.3" stroke-dashoffset="-197.9"/>
+                    <circle cx="60" cy="60" r="45" stroke="var(--warn)" stroke-dasharray="28.3 254.4" stroke-dashoffset="-240.3"/>
+                    <circle cx="60" cy="60" r="45" stroke="#cdd9da" stroke-dasharray="14.1 268.6" stroke-dashoffset="-268.6"/>
+                  </g>
+                </svg>
+                <div class="legend">
+                  <div class="lg"><span class="dot" style="background:var(--jade)"></span>Home Cleaning<span class="pc">45%</span></div>
+                  <div class="lg"><span class="dot" style="background:var(--jade-d)"></span>Deep Cleaning<span class="pc">25%</span></div>
+                  <div class="lg"><span class="dot" style="background:var(--teal3)"></span>Cooking<span class="pc">15%</span></div>
+                  <div class="lg"><span class="dot" style="background:var(--warn)"></span>Caretaker<span class="pc">10%</span></div>
+                  <div class="lg"><span class="dot" style="background:#cdd9da"></span>Others<span class="pc">5%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="panel"><h4>Recent Bookings</h4>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Neha Sharma</div><small class="muted">Home Cleaning</small></div><span style="margin-left:auto;color:var(--txt2)">10:00</span></div>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Rohit Verma</div><small class="muted">Deep Cleaning</small></div><span style="margin-left:auto;color:var(--txt2)">11:30</span></div>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Priya Singh</div><small class="muted">Cooking</small></div><span style="margin-left:auto;color:var(--txt2)">01:00</span></div>
+              <div class="rb" style="border:0"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Amit Kumar</div><small class="muted">Caretaker</small></div><span style="margin-left:auto;color:var(--txt2)">03:00</span></div>
+            </div>
+          </div>
+          <div class="arow2">
+            <div class="panel"><h4>Live Bookings Map</h4>
+              <div class="amap">
+                <svg style="position:absolute;inset:0" viewBox="0 0 400 230"><circle cx="200" cy="120" r="34" fill="var(--jade)" opacity=".15"/><circle cx="200" cy="120" r="18" fill="var(--jade)" opacity=".25"/></svg>
+                <svg class="pin" style="left:90px;top:46px;width:20px;height:20px;color:var(--jade)"><use href="#i-pin"/></svg>
+                <svg class="pin" style="left:250px;top:60px;width:20px;height:20px;color:var(--warn)"><use href="#i-pin"/></svg>
+                <svg class="pin" style="left:300px;top:150px;width:20px;height:20px;color:var(--jade)"><use href="#i-pin"/></svg>
+                <svg class="pin" style="left:130px;top:170px;width:20px;height:20px;color:var(--error)"><use href="#i-pin"/></svg>
+                <svg class="pin" style="left:194px;top:110px;width:22px;height:22px;color:var(--jade-d)"><use href="#i-pin"/></svg>
+                <div class="activepill"><svg style="width:18px;height:18px;color:var(--jade)"><use href="#i-pin"/></svg><div>Active Bookings<br><b>128</b></div></div>
+              </div>
+            </div>
+            <div class="panel"><h4>Live Bookings List</h4>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Neha Sharma</div><small class="muted">Home Cleaning · Noida</small></div><span class="badge b-prog">In Progress</span></div>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Rohit Verma</div><small class="muted">Deep Cleaning · Gurgaon</small></div><span class="badge b-prog">In Progress</span></div>
+              <div class="rb"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Priya Singh</div><small class="muted">Cooking · Noida</small></div><span class="badge b-up">Upcoming</span></div>
+              <div class="rb" style="border:0"><span class="av2"><svg><use href="#i-user"/></svg></span><div><div>Amit Kumar</div><small class="muted">Caretaker · Noida</small></div><span class="badge b-up">Upcoming</span></div>
+            </div>
+            <div class="panel"><h4>Alerts &amp; Notifications</h4>
+              <div class="alert"><span class="ad" style="background:var(--success)"><svg><use href="#i-check"/></svg></span><div>New booking received<small>2 mins ago</small></div></div>
+              <div class="alert"><span class="ad" style="background:var(--warn)"><svg><use href="#i-bell"/></svg></span><div>Professional delayed<small>5 mins ago</small></div></div>
+              <div class="alert"><span class="ad" style="background:var(--error)"><svg><use href="#i-x"/></svg></span><div>Payment failed<small>10 mins ago</small></div></div>
+              <div class="alert" style="border:0"><span class="ad" style="background:var(--gold)"><svg><use href="#i-star"/></svg></span><div>New review received<small>20 mins ago</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cap" style="margin-top:10px">Web Admin — fixed sidebar, KPI cards, bookings trend, service mix, live map &amp; alerts (collapses to a single column on mobile)</div>
+  </div>
+
+</div>
